@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply leading-24 text-sm font-normal text-lighten-color dark:text-darken-color bg-lighten-bg-body dark:bg-darken-bg-body min-h-screen overflow-y-auto;
+  }
+
+  * {
+    @apply font-sans p-0 m-0 box-border;
+  }
+
+  h1 {
+    @apply m-0 text-[#170c6b] dark:text-white font-noto font-bold text-2xl leading-34;
+  }
+
+  h2 {
+    @apply font-noto;
+  }
+
+  a {
+    @apply no-underline leading-24 text-sm font-normal outline-none;
+  }
+
+  ul {
+    @apply list-none;
+  }
+
+  input {
+    @apply text-sm font-normal leading-24 outline-none;
+  }
+
+  textarea {
+    @apply border-none;
+  }
+
+  body::-webkit-scrollbar {
+    @apply w-[12px];
+  }
+
+  body::-webkit-scrollbar-track {
+    @apply bg-lighten-bg-body dark:bg-darken-bg-body;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    @apply bg-primary border border-solid border-transparent rounded-xl bg-clip-content;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    @apply bg-primaryHover;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex justify-center items-center gap-2 select-none min-w-[40px] min-h-[40px] py-2 px-4 disabled:opacity-40 box-border transition-colors duration-300 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply text-white bg-primary enabled:hover:bg-primaryHover;
+  }
+
+  .btn-secondary {
+    @apply text-white bg-secondary hover:bg-secondaryHover;
+  }
+
+  .btn-red {
+    @apply text-white bg-red hover:bg-redHover;
+  }
+
+  .btn-green {
+    @apply text-white bg-green hover:bg-greenHover;
+  }
+
+  .btn-transparent {
+    @apply bg-transparent text-lighten-color dark:text-darken-color;
+  }
+
+  .wrapper {
+    @apply w-full max-w-[1280px] mx-auto
+  }
+}
